@@ -10,15 +10,15 @@ NOMBRE_DE_OTRA_PROPIEDAD_A_CAMBIAR
 VALOR_DE_LA_OTRA_PROPIEDAD_DESEADA
 ...
 ```
-Las variables configurables son:
+Las variables configurables son: \
     Primero (no es necesario que sea primero, pero mejor si lo es), la direccion de este ejecutable, de la siguiente manera:
 ```
 REPRODUCTOR
 X:/direccion/a/la/carpeta/Reproductor.exe
 ```
-Todas las que empiezan con "PATH_" - strings, char[100] exactamente (si son direcciones absolutas y se ponen todas mejor)
+Todas las que empiezan con "PATH_" - strings, char[100] exactamente (si son direcciones absolutas y se ponen todas mejor) \
     (todos los PATH_ deberían apuntar a la carpeta con el programa, excepto PATH_MUSICA y PATH_PLAYLISTS) (los valores
-        por defecto probablemente no te funcionen)
+        por defecto probablemente no te funcionen) \
 TIEMPO_CANCION_ANTERIOR - int (este es el segundo máximo para cambiar a la cancion anterior usando el teclado)
 
 El .txt a copiar en la carpeta de documentos está en la carpeta "Adicional", con valores predeterminados.
