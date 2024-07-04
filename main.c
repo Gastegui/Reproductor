@@ -90,7 +90,7 @@ CANCIONES* QuitarCancion(CANCIONES* canciones, char* nombreAQuitar);
 CANCIONES* AñadirFavorito(CANCIONES* disponibles, CANCIONES* cola, CANCIONES* favoritos, REPRODUCIENDO* reproduciendo);
 CANCIONES* QuitarFavorito(CANCIONES* disponibles, CANCIONES* cola, CANCIONES* favoritos, REPRODUCIENDO* reproduciendo);
 void GuardarFavoritos(CANCIONES* favoritos, char* dir);
-CANCIONES* OrdenarDisponibles(CANCIONES* disponibles, int como);
+CANCIONES* OrdenarCola(CANCIONES* disponibles, int como);
 CANCIONES* ReiniciarCola(CANCIONES* cola, CANCIONES* disponibles, REPRODUCIENDO* reproduciendo);
 void EstadisticasCambiar(REPRODUCIENDO* reproduciendo, int cambio);
 void EstadisticasCargar(REPRODUCIENDO* reproduciendo);
@@ -813,8 +813,7 @@ int main(int argc, char* argv[])
                 case TECLA_4:
                 case TECLA_5:
                 case TECLA_6:
-                    disponibles = OrdenarDisponibles(disponibles, evento.evento-48);
-                    cola = ReiniciarCola(cola, disponibles, &reproduciendo);
+                    cola = ReiniciarCola(cola, OrdenarCola(cola, evento.evento - 48), &reproduciendo);
                     aleatorizado = 0;
                     orden = evento.evento - 48;
                     strcpy(mensaje.mensaje, "Orden de cola cambiado");
@@ -933,12 +932,10 @@ int main(int argc, char* argv[])
 #pragma region Imagen
             PantallaLimpiar();
             ImagenDescargar(2);
-            printf("PATH_IMAGEN_PAUSE: %s\n", PATH_IMAGEN_PAUSE);
-            printf("PATH_IMAGEN_PLAY: %s\n", PATH_IMAGEN_PLAY);
             if (Mix_PausedMusic() == 1)
-                printf("posImagenPause = 2: %d\n",ImagenCargar(PATH_IMAGEN_PAUSE, 2, 0));
+                ImagenCargar(PATH_IMAGEN_PAUSE, 2, 0);
             else
-                printf("posImagenPlay = 2: %d\n", ImagenCargar(PATH_IMAGEN_PLAY, 2, 0));
+                ImagenCargar(PATH_IMAGEN_PLAY, 2, 0);
 
             ImagenMover(2, 5, 625);
 
@@ -1809,17 +1806,17 @@ void GuardarFavoritos(CANCIONES* favoritos, char* dir)
 }
 
 //1: Alfabetico A-Z, 2: Alfabetico Z-A, 3: duracion Mas-Menos, 4: duracion Menos-Mas, 5: album A-Z, 6: album Z-A
-CANCIONES* OrdenarDisponibles(CANCIONES* disponibles, int como)
+CANCIONES* OrdenarCola(CANCIONES* cola, int como)
 {
-    CANCIONES* actual = disponibles;
+    CANCIONES* actual = cola;
     CANCIONES* siguiente = actual->siguiente;
     CANCIONES tmp = { 0 };
     int ordenado = 0;
 
     while (ordenado == 0)
     {
-        actual = disponibles;
-        siguiente = disponibles->siguiente;
+        actual = cola;
+        siguiente = cola->siguiente;
         ordenado = 1;
         while (siguiente != NULL)
         {
@@ -1845,13 +1842,13 @@ CANCIONES* OrdenarDisponibles(CANCIONES* disponibles, int como)
         }
     }
     ordenado = 0;
-    actual = disponibles;
+    actual = cola;
     while (actual != NULL)
     {
         actual->numero = ordenado++;
         actual = actual->siguiente;
     }
-    return disponibles;
+    return cola;
 }
 
 CANCIONES* ReiniciarCola(CANCIONES* cola, CANCIONES* disponibles, REPRODUCIENDO* reproduciendo)

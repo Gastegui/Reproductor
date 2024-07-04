@@ -84,22 +84,16 @@ int ImagenDibujarUna(SDL_Texture* texture, SDL_Rect *pDest, int portada)
 	src.y = 0;
 	src.w = pDest->w;
 	src.h = pDest->h;
-	printf("Antes del if\n");
 	if (portada == 1)
 	{
-		printf("portada = 1\n");
 		dest.w /= 3;
 		dest.h /= 3;
 		SDL_RenderCopy(gRenderer, texture, &src, &dest);
-		printf("despues\n");
 	}
 	else
 	{
-		printf("portada = 0\n");
 		SDL_RenderCopy(gRenderer, texture, &src, pDest);
-		printf("despues\n");
 	}
-	printf("return\n");
 	return 0;
 }
 

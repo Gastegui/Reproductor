@@ -14,25 +14,15 @@ typedef struct S_IMG
 
 IMG imagenes[MAX_IMG];
 
+//Esto en verdad no hace falta, pero por si acaso está
 void ImagenInit(char* fileName)
 {
 	for (int i = 0; i < MAX_IMG; i++)
-	{
-		if (i == 0)
-			printf("Init, i = 0 en null\n");
 		imagenes[i].texture = NULL;
-
-		if (i == 0)
-			printf("imagenes[i].texture == NULL : %d\n", imagenes[i].texture == NULL);
-	}
-	printf("imagenes[0].texture == NULL : %d\n", imagenes[0].texture == NULL);
-
 }
 
 int ImagenCargar(char* fileName, int pos, int portada)
 {
-	if (pos == 0)
-		printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n");
 	SDL_Texture* img;
 	SDL_Renderer* gRenderer = getRenderer();
 	if (imagenes[pos].texture != NULL)
@@ -81,14 +71,10 @@ void ImagenMover(int pos, int x, int y)
 
 void ImagenDibujarTodas(void)
 {
-	printf("fuera\n");
-	printf("Antes del for. imagenes[0].texture == NULL : %d\n", imagenes[0].texture == NULL);
 	for (int i = 0; i < MAX_IMG; i++)
 	{
-		printf("i = %d\n", i);
 		if (imagenes[i].texture != NULL)
 		{
-			printf("dentro del if del texture != NULL\n");
 			ImagenDibujarUna(imagenes[i].texture, &imagenes[i].dest, imagenes[i].portada);
 		}
 	}
