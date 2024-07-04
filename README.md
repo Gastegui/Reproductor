@@ -47,7 +47,7 @@ El código de todos estos programas adicionales, están en la carpeta "Adicional
 Primero, (casi) SIEMPRE, despues del nombre del programa, hay que poner en que carpeta hay que buscar los .mp3. Se puede poner
     la dirección completa, o tan solo el nombre de la carpeta con la música dentro de la carpeta C:/Users/user/Music
 
-Parametros adicionales (tienen que estar puestos de forma individual):
+Parametros adicionales (tienen que estar puestos de forma individual):\
     -a: aleatoriza la cola\
     -b0: pone el modo de bucle 0 (al terminar de reproducir la cola, parar)\
     -b1: pone el modo de bucle 1 (al terminar de reproducir la cola, empezar desde la primera canción)\
