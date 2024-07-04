@@ -3,23 +3,23 @@
 
 Hay que crear el archivo "C:/Users/user/Documents/ReproductorConfig.txt", y dentro de este poner todas las direcciones o opciones
 que se deseen cambiar. La estructura del archivo es (el orden no importa):
-"""""
+```
 NOMBRE_DE_LA_PROPIEDAD_A_CAMBIAR
 VALOR_DE_LA_PROPIEDAD_DESEADA
 NOMBRE_DE_OTRA_PROPIEDAD_A_CAMBIAR
 VALOR_DE_LA_OTRA_PROPIEDAD_DESEADA
 ...
-"""""
+```
 Las variables configurables son:
     Primero (no es necesario que sea primero, pero mejor si lo es), la direccion de este ejecutable, de la siguiente manera:
-        """""
-        REPRODUCTOR
-        X:/direccion/a/la/carpeta/Reproductor.exe
-        """""
-    Todas las que empiezan con "PATH_" - strings, char[100] exactamente (si son direcciones absolutas y se ponen todas mejor)
-        (todos los PATH_ deberían apuntar a la carpeta con el programa, excepto PATH_MUSICA y PATH_PLAYLISTS) (los valores
-            por defecto probablemente no te funcionen)
-    TIEMPO_CANCION_ANTERIOR - int (este es el segundo máximo para cambiar a la cancion anterior usando el teclado)
+```
+REPRODUCTOR
+X:/direccion/a/la/carpeta/Reproductor.exe
+```
+Todas las que empiezan con "PATH_" - strings, char[100] exactamente (si son direcciones absolutas y se ponen todas mejor)
+    (todos los PATH_ deberían apuntar a la carpeta con el programa, excepto PATH_MUSICA y PATH_PLAYLISTS) (los valores
+        por defecto probablemente no te funcionen)
+TIEMPO_CANCION_ANTERIOR - int (este es el segundo máximo para cambiar a la cancion anterior usando el teclado)
 
 El .txt a copiar en la carpeta de documentos está en la carpeta "Adicional", con valores predeterminados.
 
