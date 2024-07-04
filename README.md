@@ -60,3 +60,32 @@ Parametros adicionales (tienen que estar puestos de forma individual):\
     -p: en vez de interpretar el primer parametro (direccion) como carpeta desde donde buscar los .mp3, lo interpreta como
         el nombre de una playlist, que buscará en la carpeta de playlists.\
     --x: reproduce la canción x de la cola (x tiene que ser un entero)
+
+## CONTROLES
+### Solo con la aplicación en primer plano:
+#### Con el ratón:
+Clica en el nombre de la canción para reproducirla \
+Si hay muchas canciones y no caben todas a la vez, pon el cursos encima de la lista de canciones y usa la rueda para hacer scroll \
+Desliza la barra del volumen (la barra de la derecha) o usa la rueda del ratón con el cursor a su altura para cambiarlo \
+Desliza la barra de reproducción (la barra de abajo) para avanzar o retroceder en la canción \
+Clica sobre el texto de Siguiente o de Bucle para cambiar su modo 
+#### Con el teclado:
+q: canción anterior o volver al inicio de la canción actual \
+w: canción siguiente \
+a: alternar modo aleatorio \
+c: alternar entre mostrar la cola o mostrar todas las canciones disponibles en el orden en el que se hayan cargado \
+1-6: distintos modos para ordenar la cola \
+t: abrir/cerrar teclas.exe \
+f: marcar/desmarcar canción como favorita \
+r: reinicia las estadísticas de la canción que esté sonando \
+o: cambiar modo de bucle \
+p: cambiar modo de siguiente \
+espacio: play/pause
+### En cualquier momento (si teclas.exe está en marcha)
+#### Con el teclado:
+tecla canción anterior: canción anterior o volver al inicio de la canción actual \
+tecla canción siguiente: canción siguiente \
+tecla play/pause: play/pause \
+F13: cerrar teclas.exe \
+F14: bajar volumen del reproductor \
+F15: subir volumen del reproductor
