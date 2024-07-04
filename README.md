@@ -48,15 +48,15 @@ Primero, (casi) SIEMPRE, despues del nombre del programa, hay que poner en que c
     la dirección completa, o tan solo el nombre de la carpeta con la música dentro de la carpeta C:/Users/user/Music
 
 Parametros adicionales (tienen que estar puestos de forma individual):
-    -a: aleatoriza la cola
-    -b0: pone el modo de bucle 0 (al terminar de reproducir la cola, parar)
-    -b1: pone el modo de bucle 1 (al terminar de reproducir la cola, empezar desde la primera canción)
-    -b2: pone el modo de bucle 2 (al terminar de reproducir la cancion, la repite)
-    -s0: pone el modo de siguiente a 0 (al terminar de reproducir la canción, no hace nada)
-    -s1: pone el modo de siguiente a 1 (al terminar de reproducir la canción, suena la siguiente en la cola)
-    -v x: pone el volumen a x (el volumen, x, va de 0 a 128) ('v' y el número entero'x', tienen que estar separados)
+    -a: aleatoriza la cola\
+    -b0: pone el modo de bucle 0 (al terminar de reproducir la cola, parar)\
+    -b1: pone el modo de bucle 1 (al terminar de reproducir la cola, empezar desde la primera canción)\
+    -b2: pone el modo de bucle 2 (al terminar de reproducir la cancion, la repite)\
+    -s0: pone el modo de siguiente a 0 (al terminar de reproducir la canción, no hace nada)\
+    -s1: pone el modo de siguiente a 1 (al terminar de reproducir la canción, suena la siguiente en la cola)\
+    -v x: pone el volumen a x (el volumen, x, va de 0 a 128) ('v' y el número entero'x', tienen que estar separados)\
     -f: reproduce solo los favoritos de la carpeta solicitada. Se puede omitir el parámetro de la dirección si se usa -f,
-        para así reproducir todas las canciones favoritas, sin importar en que carpeta estén.
+        para así reproducir todas las canciones favoritas, sin importar en que carpeta estén.\
     -p: en vez de interpretar el primer parametro (direccion) como carpeta desde donde buscar los .mp3, lo interpreta como
-        el nombre de una playlist, que buscará en la carpeta de playlists.
-    --x: reproduce la canción x de la cola (x tiene que ser un entero)
+        el nombre de una playlist, que buscará en la carpeta de playlists.\
+    --x: reproduce la canción x de la cola (x tiene que ser un entero)\
