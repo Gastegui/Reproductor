@@ -1,36 +1,36 @@
 # Reproductor
-## CONFIGURACIÓN INICIAL:
+## CONFIGURACIÓN INICIAL
 
 Hay que crear el archivo "C:/Users/user/Documents/ReproductorConfig.txt", y dentro de este poner todas las direcciones o opciones
 que se deseen cambiar. La estructura del archivo es (el orden no importa):
-"""""
+```
 NOMBRE_DE_LA_PROPIEDAD_A_CAMBIAR
 VALOR_DE_LA_PROPIEDAD_DESEADA
 NOMBRE_DE_OTRA_PROPIEDAD_A_CAMBIAR
 VALOR_DE_LA_OTRA_PROPIEDAD_DESEADA
 ...
-"""""
-Las variables configurables son:
+```
+Las variables configurables son: \
     Primero (no es necesario que sea primero, pero mejor si lo es), la direccion de este ejecutable, de la siguiente manera:
-        """""
-        REPRODUCTOR
-        X:/direccion/a/la/carpeta/Reproductor.exe
-        """""
-    Todas las que empiezan con "PATH_" - strings, char[100] exactamente (si son direcciones absolutas y se ponen todas mejor)
-        (todos los PATH_ deberían apuntar a la carpeta con el programa, excepto PATH_MUSICA y PATH_PLAYLISTS) (los valores
-            por defecto probablemente no te funcionen)
-    TIEMPO_CANCION_ANTERIOR - int (este es el segundo máximo para cambiar a la cancion anterior usando el teclado)
+```
+REPRODUCTOR
+X:/direccion/a/la/carpeta/Reproductor.exe
+```
+Todas las que empiezan con "PATH_" - strings, char[100] exactamente (si son direcciones absolutas y se ponen todas mejor) \
+    (todos los PATH_ deberían apuntar a la carpeta con el programa, excepto PATH_MUSICA y PATH_PLAYLISTS) (los valores
+        por defecto probablemente no te funcionen) \
+TIEMPO_CANCION_ANTERIOR - int (este es el segundo máximo para cambiar a la cancion anterior usando el teclado)
 
 El .txt a copiar en la carpeta de documentos está en la carpeta "Adicional", con valores predeterminados.
 
 
 ## QUE OTROS EJECUTABLES HACEN FALTA Y QUE HACEN
 
-Para ejecutar este programa, se le puede llamar desde la terminal al .exe directamente con los parámetros que hagan falta,
+Para ejecutar el reproductor, se le puede llamar desde la terminal al .exe directamente con los parámetros que hagan falta,
 o crear un acceso directo de musica.exe y añadirlo en la carpeta "C:\ProgramData\Microsoft\Windows\Start Menu\Programs" 
-para poder ejecutar este lanzador y introducir la carpeta y los parámetros deseados para lanzar el reproductor.
+para poder ejecutar este lanzador desde la barra de búsqueda de Windows, w introducir la carpeta y los parámetros deseados para lanzar el reproductor.
 
-Al ejecutar este programa, se ejecuta teclas.exe, un keylogger que solo escucha a las teclas: 
+Al ejecutar el reproductor, se ejecuta teclas.exe, un keylogger que solo escucha a las teclas: 
 media previous, media playpause, media next, f13 (cerrar teclas.exe), f14 (bajar volumen) y f15 (subir volumen). Cuando el 
 keylogger escucha alguna de estas pulsaciones, lo escribe en el fichero teclas.txt, para que luego este programa lo lea
 y haga lo que tenga que hacer. Teclas.exe borra las pulsaciones que intercepta, es decir, ninguna otra aplicación sabrá
@@ -59,4 +59,4 @@ Parametros adicionales (tienen que estar puestos de forma individual):\
         para así reproducir todas las canciones favoritas, sin importar en que carpeta estén.\
     -p: en vez de interpretar el primer parametro (direccion) como carpeta desde donde buscar los .mp3, lo interpreta como
         el nombre de una playlist, que buscará en la carpeta de playlists.\
-    --x: reproduce la canción x de la cola (x tiene que ser un entero)\
+    --x: reproduce la canción x de la cola (x tiene que ser un entero)
