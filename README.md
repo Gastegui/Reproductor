@@ -26,11 +26,11 @@ El .txt a copiar en la carpeta de documentos está en la carpeta "Adicional", co
 
 ## QUE OTROS EJECUTABLES HACEN FALTA Y QUE HACEN
 
-Para ejecutar este programa, se le puede llamar desde la terminal al .exe directamente con los parámetros que hagan falta,
+Para ejecutar el reproductor, se le puede llamar desde la terminal al .exe directamente con los parámetros que hagan falta,
 o crear un acceso directo de musica.exe y añadirlo en la carpeta "C:\ProgramData\Microsoft\Windows\Start Menu\Programs" 
-para poder ejecutar este lanzador y introducir la carpeta y los parámetros deseados para lanzar el reproductor.
+para poder ejecutar este lanzador desde la barra de búsqueda de Windows, w introducir la carpeta y los parámetros deseados para lanzar el reproductor.
 
-Al ejecutar este programa, se ejecuta teclas.exe, un keylogger que solo escucha a las teclas: 
+Al ejecutar el reproductor, se ejecuta teclas.exe, un keylogger que solo escucha a las teclas: 
 media previous, media playpause, media next, f13 (cerrar teclas.exe), f14 (bajar volumen) y f15 (subir volumen). Cuando el 
 keylogger escucha alguna de estas pulsaciones, lo escribe en el fichero teclas.txt, para que luego este programa lo lea
 y haga lo que tenga que hacer. Teclas.exe borra las pulsaciones que intercepta, es decir, ninguna otra aplicación sabrá
