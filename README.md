@@ -1,5 +1,5 @@
 # Reproductor
-## CONFIGURACIÓN INICIAL:
+## CONFIGURACIÓN INICIAL
 
 Hay que crear el archivo "C:/Users/user/Documents/ReproductorConfig.txt", y dentro de este poner todas las direcciones o opciones
 que se deseen cambiar. La estructura del archivo es (el orden no importa):
@@ -59,4 +59,4 @@ Parametros adicionales (tienen que estar puestos de forma individual):\
         para así reproducir todas las canciones favoritas, sin importar en que carpeta estén.\
     -p: en vez de interpretar el primer parametro (direccion) como carpeta desde donde buscar los .mp3, lo interpreta como
         el nombre de una playlist, que buscará en la carpeta de playlists.\
-    --x: reproduce la canción x de la cola (x tiene que ser un entero)\
+    --x: reproduce la canción x de la cola (x tiene que ser un entero)
