@@ -142,7 +142,7 @@
       <AdditionalIncludeDirectories>C:\Users\julen\Desktop\Programacion\C\Reproductor\SDL\Include;C:\Users\julen\Desktop\Programacion\C\Reproductor\SDL_Image\Include;C:\Users\julen\Desktop\Programacion\C\Reproductor\SDL_Mixer\Include;C:\Users\julen\Desktop\Programacion\C\Reproductor\SDL_Ttf\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>

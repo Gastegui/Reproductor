@@ -1,1 +1,0 @@
-en la carpeta system32 tienen que estar los archivos musica.exe (c) y imagenes.exe (py)
